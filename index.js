@@ -33,6 +33,14 @@ async function run() {
 }
 run().catch(console.dir);
 
+app.get('/', function(req, res){
+    const s ={
+        "hola":"mundo"
+    }
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain");
+    res.send(s);
+})
 
 
 app.post('/api/transacciones/agregar', function (req, res) {
